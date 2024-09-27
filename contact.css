@@ -59,11 +59,10 @@ img{
 
 Footer{
     background-color: #364f91;
-    /* height: 100px; */
+    position: absolute;
     width: 100%;
     display: flex;
     flex-direction: row;
-    text-align: center;
     align-items: center;
     justify-content: center;
     bottom: 0;
