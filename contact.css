@@ -66,6 +66,7 @@ Footer{
     text-align: center;
     align-items: center;
     justify-content: center;
+    bottom: 0;
 }
 .footerElements {
     display: flex;
