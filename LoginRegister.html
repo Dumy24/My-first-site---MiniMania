@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #faebd7;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .navBar {
+        background-color: #364f91;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      .navBarElements img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .loginForm {
+        width: 500px;
+        height: 400px;
+        border-radius: 40px;
+        box-shadow: 5px 5px 10px black;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #364e91;
+        text-align: center;
+        color: aliceblue;
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+      }
+      .checkBox {
+        margin-top: 30px;
+        font-size: 14px;
+        justify-content: center;
+        display: flex;
+      }
+      .registerButton {
+        font-size: 14px;
+      }
+      .registerButton a {
+        color: aliceblue;
+        transition: 0.5s ease-in-out;
+      }
+      .registerButton a:hover {
+        color: #faebd7;
+      }
+      button {
+        margin-top: 10px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      input {
+        border: 1px solid black;
+        border-radius: 7px;
+        padding: 3px 15px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        box-shadow: 2px 2px black;
+      }
+      label {
+        margin-bottom: 5px;
+      }
+
+      .passwordInput {
+        width: 60%;
+        margin-left: -30px;
+        position: relative;
+      }
+
+      #showPassword {
+        position: absolute;
+        top: 10%;
+        right: -1rem;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 1.5rem;
+        display: flex;
+        align-items: center;
+      }
+
+      Footer {
+        background-color: #364f91;
+        /* height: 100px; */
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+      .footerElements {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 100;
+        /* padding-top: 30px; */
+        position: relative;
+        width: 80%;
+        height: 50px;
+      }
+
+      .footerElements p {
+        font-family: "Montserrat";
+        font-size: 30px;
+        color: #fff;
+        transition: 1s ease-in-out;
+        /* margin-top: 35px; */
+      }
+
+      .footerImages {
+        display: flex;
+        justify-content: space-around;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navBar">
+      <div class="navBarElements">
+        <a class="homeButton" href="index.html">
+          <img src="IMG/MiniLogo.png" alt="Logo"
+        /></a>
+      </div>
+    </div>
+
+    <div class="loginForm">
+      <form action="">
+        <h1>Login</h1>
+
+        <label for="mail">Email</label>
+        <input id="mail" type="text" name="email" style="width: 60%" />
+
+        <label for="password">Password</label>
+        <div class="passwordInput">
+          <input id="password" type="password" style="width: 100%" />
+          <button
+            style="background-color: transparent; border: none"
+            type="button"
+            id="showPassword"
+          >
+            <img
+              style="width: 28px"
+              src="IMG/eye-open.png"
+              alt="Show Password"
+            />
+          </button>
+        </div>
+
+        <button>Sign In</button>
+
+        <div class="checkBox">
+          <input style="accent-color: rgb(0, 170, 0)" type="checkbox" /> Keep me
+          signed in
+        </div>
+        <div class="registerButton">
+          <p>Don't have an account?</p>
+          <a href="Register.html">Register</a>
+        </div>
+      </form>
+    </div>
+    <script>
+      const show_pw_btn = document.querySelector("#showPassword");
+      const show_pw_icon = show_pw_btn.querySelector("img");
+      const pw_input = document.querySelector("#password");
+
+      show_pw_btn.addEventListener("click", () => {
+        pw_input.type = pw_input.type === "password" ? "text" : "password";
+
+        show_pw_icon.src = show_pw_icon.src.includes("open")
+          ? "IMG/eye-closed.png"
+          : "IMG/eye-open.png";
+      });
+    </script>
+  </body>
+  <footer>
+    <div class="footerElements">
+      <a
+        class="footerImages"
+        href="https://www.instagram.com/dumy5/"
+        target="_blank"
+      >
+        <img id="socialMedia" src="IMG/InstaIcon.png" alt="Instagram" />
+      </a>
+      <!-- <p>Thank you for your time!</p> -->
+      <a
+        class="footerImages"
+        href="https://www.facebook.com/andrei.daniel.796/"
+        target="_blank"
+        ><img id="socialMedia" src="IMG/facebook.png" alt="facebook" />
+      </a>
+    </div>
+  </footer>
+</html>

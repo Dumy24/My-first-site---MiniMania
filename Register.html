@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #faebd7;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .navBar {
+        background-color: #364f91;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 5%;
+      }
+      .navBarElements img {
+        width: 100px;
+        height: 100px;
+      }
+      .loginForm {
+        width: 700px;
+        /* height: 600px; */
+        border-radius: 40px;
+        box-shadow: 5px 5px 10px black;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #364e91;
+        text-align: center;
+        color: aliceblue;
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+      }
+      input {
+        width: 85%;
+        padding: 12px 20px;
+        border-radius: 10px;
+        border: 1px solid black;
+        box-shadow: 2px 2px 2px black;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+      .formContent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 40px;
+        margin-bottom: 20px;
+      }
+      button {
+        height: 50px;
+        width: 100px;
+        border-radius: 20px;
+        transition: 0.5s ease-in-out;
+        margin-bottom: 10px;
+      }
+      button:hover {
+        background-color: #faebd7;
+      }
+      #backButton {
+        position: absolute;
+        display: flex;
+        /* border: 1px solid red; */
+        margin: 10px 0px 0px 20px;
+      }
+
+      #backButton img {
+        height: 40px;
+      }
+
+      Footer {
+        background-color: #364f91;
+        /* height: 100px; */
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+      }
+      .footerElements {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 100;
+        /* padding-top: 30px; */
+        position: relative;
+        width: 80%;
+        height: 50px;
+      }
+
+      .footerImages {
+        display: flex;
+        justify-content: space-around;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navBar">
+      <div class="navBarElements">
+        <a class="homeButton" href="index.html">
+          <img src="IMG/MiniLogo.png" alt="Logo"
+        /></a>
+      </div>
+    </div>
+    <div class="loginForm">
+      <form action="">
+        <a id="backButton" href="LoginRegister.html"
+          ><img src="img/back-button.png" alt=""
+        /></a>
+        <h1>Register</h1>
+        <div class="formContent">
+          <label for="fname">First name</label>
+          <input id="fname" type="text" placeholder="Your name..." />
+          <label for="lname">Last name</label>
+          <input id="lname" type="text" placeholder="Your last name..." />
+          <label for="email">Email</label>
+          <input id="email" type="text" placeholder="Your email..." />
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Your password..." />
+          <label for="cpassword">Confirm password</label>
+          <input
+            id="cpassword"
+            type="password"
+            placeholder="Confirm password..."
+          />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+  <footer>
+    <div class="footerElements">
+      <a
+        class="footerImages"
+        href="https://www.instagram.com/dumy5/"
+        target="_blank"
+      >
+        <img id="socialMedia" src="IMG/InstaIcon.png" alt="Instagram" />
+      </a>
+      <!-- <p>Thank you for your time!</p> -->
+      <a
+        class="footerImages"
+        href="https://www.facebook.com/andrei.daniel.796/"
+        target="_blank"
+        ><img id="socialMedia" src="IMG/facebook.png" alt="facebook" />
+      </a>
+    </div>
+  </footer>
+</html>
